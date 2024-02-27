@@ -1,0 +1,131 @@
+---
+import Footer from '../components/Footer.astro'
+import Layout from '../layouts/Layout.astro';
+import Article from '../components/Article.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<Layout title="Valen portfolio">
+	<div class="horizontal">
+		<div class="vertical">
+			<Nav/>
+				<h1  class="
+				text-center text-balance text-2xl  relative 				lg:text-6xl md:text-4xl lg:w-[1000px] md:w-[600px] w-[300px] lg:mt-[200px]  
+				text-white opacity-70 p-5 mx-auto mt-[100px] anim ">
+					Valentin Berger Fullstack Developer
+				</h1>
+				<span id="proyectos"></span>
+				<h2 class="text-center text-4xl mt-[200px]" >Proyectos</h2>
+				<section class="flex flex-col w-1/2 items-center  mx-auto"  >
+					<div class="flex ">
+						<Article title="fast-delivery.docx" mwidth="w-[300px]" icons={["fa-brands  fa-aws ", "fa-brands fa-docker ", "fa-brands fa-figma"]} src={"/fast.webp"} content=
+						"página web de envío de paquetes, donde colaboramos con un Scrum Master y un pseudo-cliente. Incorporamos exitosamente tecnologías como TypeScript, Next.js, Docker y otras para mejorar la plataforma."
+						/>
+					</div>
+					<div>
+						<Article title="el-club.docx" src={"/el-club.webp"} mwidth="w-[300px]" icons={["fa-solid fa-mobile-screen", "fa-brands fa-envira", "fa-brands fa-trello"]} content=
+						"Práctica profesional en Ceibo Digital, donde durante un mes nos sumergimos en el aprendizaje de React Native y otras tecnologías desde cero, culminando en la creación exitosa de una aplicación para gestionar eventos."
+						/>
+					</div>
+					<div>
+						<Article title="design-system.docx" mwidth="w-[300px]" icons={["fa-solid fa-book", "fa-brands fa-figma"]} src={"/coming-soon.webp"} content=
+						"Sistema de diseño elaborado en Figma y documentado con Docusaurus, con el propósito de agilizar el desarrollo de la interfaz front-end."
+						/>
+					</div>
+				</section>
+				  <span id="tecnologias" ></span>
+					<h2 class="text-center text-4xl mt-[120px]">Tecnologias</h2>
+				
+				<section class="grid grid-cols-3  place-items-center py-10">
+				  <i class="fa-brands vpshad fa-js  fa-5x py-10"></i>
+					<i class="fa-brands vpshad fa-css3-alt fa-5x py-10"></i>
+					<i class="fa-brands vpshad fa-html5 fa-5x py-10"></i>
+					<i class="fa-brands vpshad fa-react fa-5x py-10"></i>
+					<i class="fa-brands vpshad fa-node-js fa-5x py-10"></i>
+					<i class="fa-brands vpshad fa-aws fa-5x py-10"></i>
+					<i class="fa-brands vpshad fa-figma fa-5x py-10"></i>
+					<i class="fa-brands vpshad fa-npm fa-5x py-10"></i>
+					<i class="fa-brands vpshad fa-docker fa-5x py-10"></i>
+					<i class="fa-brands vpshad fa-envira fa-5x py-10"></i>
+					<i class="fa-brands vpshad fa-trello fa-5x py-10"></i>
+					<i class="fa-solid vpshad  fa-database fa-5x py-10"></i>
+				</section>
+					<span id="sobreMi" class=""></span>
+					<h2 class="text-center text-4xl  ">Sobre mi</h2>
+					<div class="w-full flex  justify-center inline-block py-10">
+						<article class="mt-10 p-[5px] w-max bg-purple border border-strong-pink shadow-md">
+							<div class="flex justify-between   mb-[5px] ">
+								<h2 class="inline-block font-medium">sobre mi.txt</h2>
+								<button class="font-medium text-center  border border-strong-pink bg-white text-strong-pink px-[5px]">X</button>
+							</div>
+							<header class="bg-vanilla border border-strong-pink  flex  ">
+								 <div class="my-auto w-[300px] md:w-[600px] p-[10px] my-10 h-1/2 text-xl vapshad text-black  font-medium font-lucidity">
+									<p class="pt-2" >
+										¡Hola! Soy Valen, graduado en <span class="text-shadow">Desarrollo Fullstack</span> en Plataforma 5.
+									</p>
+									<p class="pt-2">
+										Durante el transcurso de mi educación y las prácticas en las que participé, tuve la valiosa oportunidad de colaborar en <span class="text-shadow">diversos equipos</span>, desarrollando asi mis habilidades de escucha y comunicación, contribuyendo así a mejorar los procesos y a relacionarme con otros desarrolladores .
+									</p>
+									<p class="pt-2">
+										La programación es mi <span class="text-shadow">pasión</span>, y mi enfoque en el aprendizaje <span class="text-shadow">autodidacta</span> me mantiene al tanto de las últimas tecnologías.
+									</p>
+									<p class="pt-2">
+										Mi objetivo actual es obtener mi primera experiencia laboral, donde pueda refinar tanto mis habilidades técnicas como las habilidades blandas, cruzando asi la línea entre hacer lo que me apasiona y trabajar en lo que amo.
+									</p>
+									<p class="pt-2">	
+										Si deseas conocer más sobre mí, no dudes en conectarte conmigo en <span class="text-shadow">LinkedIn</span> o enviarme un correo electrónico. Estoy abierto a nuevas conexiones y oportunidades.
+									</p>
+									</div> 
+									</header>
+						</article>
+					</div>
+					<Footer />			
+		</div>
+	</div>
+	
+</Layout>
+
+<style>
+	.font-lucidity{
+    font-family: "lucidity";
+  }
+	.text-shadow{
+		text-shadow: -1px 0px 1px var(--strong-pink);
+	}
+	.bg{
+		background: var(--purple)	;
+	}
+	h1 {
+		
+		font-family: "Ungai";
+		text-shadow: -2px -2px 1px var(--strong-pink), 2px 2px 1px var(--lightblue), 0px 0px 5px #000;
+	}
+	.vpshad{
+		filter: drop-shadow(-2px -2px 0px var(--strong-pink)) drop-shadow(2px 2px 0px var(--lightblue))
+	}
+	.vertical > h2
+	{
+		
+		font-family: "Ungai";
+		text-shadow: -1px -1px 1px var(--strong-pink), 1px 1px 1px var(--lightblue), 0px 0px 2px #000;
+	}
+
+	.anim{
+		animation: pulse 6s infinite alternate ease-in-out;
+	}
+	
+
+	@keyframes pulse{
+		0%{
+			rotate: -10deg;
+			scale: 1.3;
+		}
+		50%{
+			scale: .8;
+		}
+		100%{
+			rotate: 10deg;
+			scale: 1.3;
+		}
+	}
+</style>

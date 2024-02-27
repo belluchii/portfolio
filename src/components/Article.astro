@@ -1,0 +1,29 @@
+
+<article class={"mt-10 p-[5px] w-max bg-purple border border-strong-pink shadow-md " + Astro.props.display}>
+  <div class="flex justify-between   mb-[5px] ">
+    <h2 class="inline-block font-medium">{Astro.props.title}</h2>
+    <p class="font-medium text-center  border border-strong-pink text-strong-pink bg-white px-[5px]">X</p>
+  </div>
+  <header class="bg-vanilla border border-strong-pink  flex md:flex-row flex-col   ">
+    <img src={Astro.props.src} class={Astro.props.mwidth}/>
+    <div class="flex flex-col  justify-center items-center">
+      
+      {Astro.props.content ? <p class=" w-[250px] md:w-[400px] py-2 p-[10px] h-min text-xl vapshad text-black font-medium font-lucidity">{Astro.props.content}</p> : ""}
+      <div class=" py-2 mx-auto  ">
+        {Astro.props.icons ? Astro.props.icons.map((x: "")  => <i class={x + " text-black vpshad fa-3x p-5"}/>) : null }
+      </div>
+  </div>
+  </header>
+</article>
+
+<style>
+  .font-lucidity{
+    font-family: "lucidity";
+  }
+  .vpshad{
+		filter: drop-shadow(-2px -2px 0px var(--strong-pink)) drop-shadow(2px 2px 0px var(--lightblue))
+	}
+  .vapshad{
+		text-shadow: -1px 0px 2px var(--strong-pink);
+	}
+</style>

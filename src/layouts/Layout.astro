@@ -1,0 +1,144 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script src="https://kit.fontawesome.com/b7247f2229.js" crossorigin="anonymous"></script>
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+  --lavanda: #fec5f8;
+  --vanilla: #fdf3b7;
+  --pink: #d67bd3;
+  --strong-pink: #ff00d6;
+  --purple: #eebfff;
+  --lightblue: #c0fcee;
+  --blue: #a6b7f6;
+  --bg: linear-gradient(var(--lavanda), var(--lightblue));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lavanda: #fec5f8;
+    --vanilla: #fdf3b7;
+    --pink: #d67bd3;
+    --purple: #eebfff;
+    --lightblue: #c0fcee;
+    --blue: #afc1ff;
+    --bg: linear-gradient(var(--lavanda), var(--lightblue));
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto;
+  }
+}
+
+@font-face {
+  font-family: 'lucidity';
+  src: url('/fonts/lucidity.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+ 
+}
+
+@font-face {
+  font-family: 'Ungai';
+  src: url('/fonts/Ungai.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+ 
+}
+
+
+body {
+  overflow-x: hidden;
+  font-size: 14px;
+  font-weight: 200;
+  color: #fff;
+  min-height: 100vh;
+  background: linear-gradient(var(--lightblue) 0%, var(--lavanda) 60%);  
+}
+
+html, body{
+  scroll-behavior: smooth;
+}
+
+.horizontal {
+  width: 100vw;
+  min-height: 100vh;
+  background-size: 100% 40px;
+  background-image: linear-gradient(
+    #fff,
+    #fff 1px,
+    transparent 1px,
+    transparent 90px
+  );
+  animation: 30s linear infinite horizontal alternate;
+}
+
+.vertical {
+  width: 100vw;
+  min-height: 100vh;
+  background-size: 40px 100%;
+  background-image: linear-gradient(
+    to right,
+    #fff,
+    #fff 1px,
+    transparent 1px,
+    transparent
+  );
+  animation: 30s linear infinite vertical alternate;
+}
+@keyframes horizontal {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% -100%;
+  }
+}
+
+@keyframes vertical {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: -100% 0%;
+  }
+}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #eeeeee;
+		
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style>
