@@ -23,12 +23,12 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-  --lavanda: #fec5f8;
+  --lavanda: #e00097;
   --vanilla: #fdf3b7;
   --pink: #d67bd3;
   --strong-pink: #ff00d6;
   --purple: #eebfff;
-  --lightblue: #c0fcee;
+  --lightblue: #9f3bbc;
   --blue: #a6b7f6;
   --bg: linear-gradient(var(--lavanda), var(--lightblue));
 }
@@ -75,7 +75,13 @@ body {
   font-weight: 200;
   color: #fff;
   min-height: 100vh;
-  background: linear-gradient(var(--lightblue) 0%, var(--lavanda) 60%);  
+  background: linear-gradient(var(--lightblue) 40%, var(--lavanda) 100%);  
+  background-clip: border-box;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("https://preview.redd.it/1ziecyouvwk71.jpg?width=1920&format=pjpg&auto=webp&s=6994802363b156a1fd09ce18ac9c8594750b31fa");
 }
 
 html, body{
@@ -92,7 +98,7 @@ html, body{
     transparent 1px,
     transparent 90px
   );
-  animation: 30s linear infinite horizontal alternate;
+  animation: 60s linear infinite horizontal alternate;
 }
 
 .vertical {
@@ -106,7 +112,7 @@ html, body{
     transparent 1px,
     transparent
   );
-  animation: 30s linear infinite vertical alternate;
+  animation: 60s linear infinite vertical alternate;
 }
 @keyframes horizontal {
   from {

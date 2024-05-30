@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        lavanda: "#fec5f8",
+        lavanda: "#e00097",
         vanilla: "#fdf3b7",
         pink: "#d67bd3",
         "strong-pink": "#ff00d6",
-        purple: "#eebfff",
+        purple: "#e652c3",
         lightblue: "#c0fcee",
         blue: "#a6b7f6",
       },
