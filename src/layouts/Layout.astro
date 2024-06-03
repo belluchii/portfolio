@@ -74,15 +74,6 @@ body {
   font-size: 14px;
   font-weight: 200;
   color: #fff;
-  position: sticky;
-  top: 0;
-  background: linear-gradient(var(--lightblue) 40%, var(--lavanda) 100%);  
-  background-clip: border-box;
-  background-size: auto 120dvh ;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("https://preview.redd.it/1ziecyouvwk71.jpg?width=1920&format=pjpg&auto=webp&s=6994802363b156a1fd09ce18ac9c8594750b31fa");
 }
 
 html, body{
@@ -90,8 +81,10 @@ html, body{
 }
 
 .horizontal {
+  position: fixed;
+  z-index: -1;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   background-size: 100% 40px;
   background-image: linear-gradient(
     #fff,
@@ -99,12 +92,14 @@ html, body{
     transparent 1px,
     transparent 90px
   );
-  animation: 60s linear infinite horizontal alternate;
+  animation: 30s linear infinite horizontal alternate;
 }
 
 .vertical {
+  z-index: -1;
+  position: fixed;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   background-size: 40px 100%;
   background-image: linear-gradient(
     to right,
@@ -113,7 +108,7 @@ html, body{
     transparent 1px,
     transparent
   );
-  animation: 60s linear infinite vertical alternate;
+  animation: 30s linear infinite vertical alternate;
 }
 @keyframes horizontal {
   from {
