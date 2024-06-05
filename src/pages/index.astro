@@ -11,38 +11,39 @@ import Nav from '../components/Nav.astro';
 	</div>
 	<div class="vertical">
 	</div>
-			<i class="fa-solid fa-envelope contact "/>
 			<Nav/>
 			<div class="anim">
 
 				<h1  class="
 				text-center   text-2xl  lg:text-6xl md:text-4xl lg:w-[1000px] md:w-[600px] w-[360px] lg:mt-[200px] mx-auto mt-[100px] ">
-				Valentin Berger 
+			Valentin Berger
 			</h1>
 			<h1  class="
 				text-center   text-2xl  	lg:text-6xl md:text-4xl lg:w-[1000px] md:w-[600px] w-[360px] 
 				 mx-auto  ">
-				 Fullstack Developer
+				Fullstack Developer
 			</h1>
 		</div>
 				<span id="proyectos"></span>
 				<h2 class="text-center text-2xl md:text-4xl mt-[100px]" >Proyectos</h2>
-				<section class="flex flex-col w-1/2 items-center  mx-auto"  >
-					<div class="flex ">
-						<Article title="el-club.docx" src={"/el-club.webp"} mwidth="w-[300px]" icons={["fa-solid fa-mobile-screen", "fa-brands fa-envira", "fa-brands fa-trello"]} content=
+				
+				<section class="flex flex-col w-max relative items-center  mx-auto"  >
+				
+				
+						<Article  urls={[{url:"https://github.com/alba-97/ceibo-front", name:"front"}, {url: "https://github.com/alba-97/ceibo-back", name:"back"}]} title="el-club.docx" src={"/el-club.webp"} mwidth="w-[300px] h-[300px]" icons={["fa-solid fa-mobile-screen", "fa-brands fa-envira", "fa-brands fa-trello"]} content=
 						"Práctica profesional en Ceibo Digital, donde durante un mes nos sumergimos en el aprendizaje de React Native y otras tecnologías desde cero, culminando en la creación exitosa de una aplicación para gestionar eventos."
 						/>
-					</div>
-					<div>
-						<Article title="fast-delivery.docx" mwidth="w-[300px]" icons={["fa-brands  fa-aws ", "fa-brands fa-docker ", "fa-brands fa-figma"]} src={"/fast.webp"} content=
-						"página web de envío de paquetes, donde colaboramos con un Scrum Master y un pseudo-cliente. Incorporamos exitosamente tecnologías como TypeScript, Next.js, Docker y otras para mejorar la plataforma."
+			
+					
+					
+						<Article  urls={[{url:"https://github.com/josecitoMoya/fast-delivery-front", name:"front"}, {url: "https://github.com/noahpark24/fast-delivery-back", name:"back"}]} title="fast-delivery.docx" mwidth="w-[300px] h-[300px]" icons={["fa-brands  fa-aws ", "fa-brands fa-docker ", "fa-brands fa-figma"]} src={"/fast.webp"} content=
+						"página web de envío de paquetes, donde colaboramos con un Scrum Master y un cliente. Incorporamos exitosamente tecnologías como TypeScript, Next.js, Docker y otras para mejorar la plataforma."
 						/>
-					</div>
-					<div>
-						<Article title="design-system.docx" mwidth="w-[300px]" icons={["fa-solid fa-book", "fa-brands fa-figma"]} src={"/coming-soon.webp"} content=
-						"Sistema de diseño elaborado en Figma y documentado con Docusaurus, con el propósito de agilizar el desarrollo de la interfaz front-end."
+				
+						<Article  urls={[{url:"https://github.com/belluchii/tee-z-front", name:"front"}, {url: "https://github.com/belluchii/tee-z-back", name:"back"}, {url:"https://tee-z.netlify.app/", name:"preview"}]} title="design-system.docx" mwidth="w-[300px] h-[300px]" icons={["fa-brands fa-react", "fa-brands fa-css3-alt", "fa-brands fa-envira"]} src={"/z-render.webp"} content=
+						"Desarrollé un proyecto personal de un e-commerce de remeras unisex para jóvenes, donde puse a prueba mis habilidades fullstack. Implementé el backend utilizando Express y lo integré con el frontend desarrollado en React"
 						/>
-					</div>
+				
 				</section>
 				  <span id="tecnologias" ></span>
 					<h2 class="text-center text-4xl mt-[120px]">Tecnologias</h2>
@@ -94,6 +95,22 @@ import Nav from '../components/Nav.astro';
 				
 	
 </Layout>
+<script>
+	const hov = document.querySelectorAll(".hov-img")
+	const disabled = document.querySelectorAll(".disabled")
+ 
+	for(let i = 0; i < hov.length; i++){
+
+		hov[i]?.addEventListener("mouseover", ()=>setTimeout(()=>{
+			disabled[i]?.classList.remove("disabled")
+			
+		 }, 1))
+		 
+		 hov[i]?.addEventListener("mouseout", ()=> setTimeout(()=>{
+			 disabled[i]?.classList.add("disabled")
+		 }, 1))
+	 }
+ </script>
 
 <style>
 	.bg-fix{
@@ -104,6 +121,10 @@ import Nav from '../components/Nav.astro';
 		position: fixed;
 		top: 0;
 		left: 0;
+	}
+	.text-up{
+		font-weight: 400; 
+		font-size: 24px;
 	}
 	
 	.contact{
