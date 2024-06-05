@@ -10,11 +10,11 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Portfolio personal de Valentin Berger" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/enigma-logo.ico" />
     <script src="https://kit.fontawesome.com/b7247f2229.js" crossorigin="anonymous"></script>
-		<meta name="generator" content="Portfolio personal de valentin berger" />
+		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
